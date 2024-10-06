@@ -7,6 +7,9 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def cemetery(request):
+    return render(request, 'cemetery.html')
+
 def books(request):
     return render(request, 'books.html')
 
