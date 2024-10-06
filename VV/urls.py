@@ -9,6 +9,7 @@ urlpatterns = [
     path('', song_views.home, name='home'),  # Главная страница
     path('about/', song_views.about, name='about'),  # Раздел "Обо мне"
     path('books/', song_views.books, name='books'),  # Раздел "Книги"
+    path('cemetery/', song_views.cemetery, name='cemetery'),
     path('songs/', include('songs.urls')),  # Подключение URL-ов приложения songs
 ]
 
