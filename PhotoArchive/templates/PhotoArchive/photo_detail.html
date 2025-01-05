@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ photo.title }}</h1>
+    <div class="photo-detail">
+        <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+        <a href="{% url 'photo_list' %}" class="btn btn-primary">Назад к фотографиям</a>
+    </div>
+</div>
+
+<style>
+    .photo-detail img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .photo-detail {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+{% endblock %}

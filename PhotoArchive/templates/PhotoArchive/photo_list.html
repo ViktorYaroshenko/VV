@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" xmlns:h1="http://www.w3.org/1999/html">
+    <h1 class="center-text">Фотоархив</h1>
+    <div class="photo-grid">
+        {% for photo in photos %}
+            <div class="photo-card">
+                <a href="{% url 'photo_detail' photo.pk %}">
+                    <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+                </a>
+                <h3>{{ photo.title }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+    .photo-card {
+        text-align: center;
+    }
+    .photo-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+{% endblock %}

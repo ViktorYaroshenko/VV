@@ -11,6 +11,7 @@ urlpatterns = [
     path('books/', song_views.books, name='books'),  # Раздел "Книги"
     path('cemetery/', song_views.cemetery, name='cemetery'),
     path('songs/', include('songs.urls')),  # Подключение URL-ов приложения songs
+    path('photos/', include('PhotoArchive.urls')),
 ]
 
 if settings.DEBUG:
