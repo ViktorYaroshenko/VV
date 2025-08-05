@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-j+p)@!ddffrkxh2*mx!hjy&wv_j6!!e_y@*01+80xl)32=nd=m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'vvyaroshenko.ru',
+    'www.vvyaroshenko.ru',
+    '127.0.0.1',
+    'localhost'
+]
 
 
 # Application definition
@@ -124,7 +129,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 # Путь к папке, где Django будет искать статические файлы
 STATICFILES_DIRS = [

@@ -14,7 +14,7 @@
 <p>{{ song.lyrics|linebreaksbr }}</p>
 <div style="margin-top: 20px;">
         {% if category == 'poem' %}
-            <a href="{% url 'poems_list' %}" class="button">Назад к списку стихотворений</a>
+            <a href="{% url 'poems_list' %}" class="button">Назад к списку стихов</a>
         {% elif category == 'song' %}
             <a href="{% url 'songs_list' %}" class="button">Назад к списку песен</a>
         {% elif category == 'story' %}
